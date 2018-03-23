@@ -1,0 +1,29 @@
+
+  
+<%= simple_form_for(@booking) do |f| %>
+  
+  <%= f.input :idnumber %>
+   
+  <%= f.input :firstname %>
+   
+  <%= f.input :lastname %>
+   
+  <%= f.input :phone %>
+   
+  <%= f.input :bookingfor, as: :datetime, start_year: Date.today.year, ampm: true, order: [:day, :month, :year] %>
+  
+  <div class="field"><br>
+    <%= f.label :Clubname %><br>
+    <%= f.select :socialclubname, [['Aiken'],['Casement'],['Cathal Brugha'],['Collins']] %>
+  </div>
+  <div class="field"><br>
+    <%= f.label :Clublocation %><br>
+    <%= f.select :socialclublocation, [['Dundalk'],['Baldonnel'],['Dublin'],['Cork']] %>
+  </div>
+  
+  <br><br>
+  <%= f.button :submit, class: "btn btn-primary" %>
+  
+ <% end %>
+ 
+

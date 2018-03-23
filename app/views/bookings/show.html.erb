@@ -1,0 +1,48 @@
+<!--Takes title of the lastname and renders it from the show.html.erb into the browser-->
+<% provide(:lastname, @booking.lastname) %>
+ <h1><%= @booking.idnumber %></h1>
+ <header>
+  <h1><%= @booking.idnumber %></h1>
+  <ul class="actions">
+   <li><%= link_to "Edit Booking", edit_booking_path(@booking), class: "edit" %></li>
+   <li><%= link_to "Delete Booking", booking_path(@booking), method: :delete, data: {confirm: "Are you sure?"}, class: "delete" %></li>
+  </ul>
+ </header>
+
+<p>
+  <strong>Idnumber:</strong>
+  <%= @booking.idnumber %>
+</p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @booking.firstname %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @booking.lastname %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @booking.phone %>
+</p>
+
+<p>
+  <strong>Bookingfor:</strong>
+  <%= time_setup(@booking.bookingfor) %>
+</p>
+
+<p>
+  <strong>Socialclubname:</strong>
+  <%= @booking.socialclubname %>
+</p>
+
+<p>
+  <strong>Socialclublocation:</strong>
+  <%= @booking.socialclublocation %>
+</p>
+
+<%= link_to 'Edit', edit_booking_path(@booking) %> |
+<%= link_to 'Back', bookings_path %>

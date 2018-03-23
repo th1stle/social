@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= full_title(yield(:lastname)) %></title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  
+  <!-- Below command points to navbar code in _header.html.erb -->  
+  <%= render "layouts/header" %>
+  
+  <!-- flash message to show when booking is updated --> 
+  <% flash.each do |type, message| %>
+    <div class="alert alert"-<%= type %>">
+     <%= message %>
+    </div>
+  <% end %>
+  
+  <% if current_user %>
+  Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+<% else %>
+  <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+<% end %>
+
+<div class="container">
+  <%= yield %>
+</div>
+
+
+
+</body>
+</html>
