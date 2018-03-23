@@ -25,9 +25,17 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'awesome_print', '~> 1.8'
-gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
-gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.3'
-gem 'simple_form', '~> 3.5', '>= 3.5.1'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7' #for bootstrap framework
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.3' 
+gem 'simple_form', '~> 3.5', '>= 3.5.1' # form manipulation
+gem 'pundit', '~> 1.1'
+gem 'friendly_id', '~> 5.2', '>= 5.2.3' #Search engine optimization
+gem 'carrierwave', '~> 1.2', '>= 1.2.2' #uploading images
+#gem 'fog', '~> 2.0' #cloud image upload
+gem 'mini_magick', '~> 4.8' #carrierwave development
+gem 'searchkick', '~> 3.0', '>= 3.0.1' #search function
+gem 'will_paginate', '~> 3.1', '>= 3.1.6' #pagination
+gem 'bootstrap-will_paginate', '~> 0.0.10' #bootstrap pagination
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
