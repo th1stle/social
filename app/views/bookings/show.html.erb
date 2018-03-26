@@ -4,8 +4,8 @@
  <header>
   <h1><%= @booking.idnumber %></h1>
   <ul class="actions">
-   <li><%= link_to "Edit Booking", edit_booking_path(@booking), class: "edit" %></li>
-   <li><%= link_to "Delete Booking", booking_path(@booking), method: :delete, data: {confirm: "Are you sure?"}, class: "delete" %></li>
+   <li><%= link_to "Edit Booking", edit_booking_path(@booking), class: "edit" if policy(@booking).edit? %></li>
+   <li><%= link_to "Delete Booking", booking_path(@booking), method: :delete, data: {confirm: "Are you sure you wish to delete this booking?"}, class: "delete" if policy(@booking).destroy? %></li>
   </ul>
  </header>
 

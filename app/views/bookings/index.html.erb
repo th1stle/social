@@ -2,7 +2,7 @@
   <h1>All Bookings</h1>
   
   <ul class="actions">
-    <li><%= link_to "New Booking", new_booking_path, class: "new" %></ul>
+    <li><%= link_to "New Booking", new_booking_path, class: "new"  if policy(Booking).new? %></li>
   </ul>
 </header>
 <p id="notice"><%= notice %></p>
@@ -33,9 +33,7 @@
   </div>
 
 
-  <div class="col-sm-9">
-<h3>Book here for your chosen DF social club</h3>
-</div>
+  
 
   <tbody>
     <% @bookings.each do |booking| %>

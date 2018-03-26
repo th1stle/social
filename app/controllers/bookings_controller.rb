@@ -12,18 +12,20 @@ class BookingsController < ApplicationController
   # GET /bookings.json
   def index
     @bookings = Booking.all
+    #authorize @bookings, :index?
   end
 
   # GET /bookings/1
   # GET /bookings/1.json
   def show
     @booking = Booking.find(params[:id])
+    #authorize @bookings, :show?
   end
 
   # GET /bookings/new
   def new
   @booking = Booking.new
-    
+  #authorize @booking, :new?
   end
 
   # GET /bookings/1/edit

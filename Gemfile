@@ -28,7 +28,7 @@ gem 'awesome_print', '~> 1.8'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7' #for bootstrap framework
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.3' 
 gem 'simple_form', '~> 3.5', '>= 3.5.1' # form manipulation
-gem 'pundit', '~> 1.1'
+gem 'pundit', '~> 1.1' #rails gem for authorization
 gem 'friendly_id', '~> 5.2', '>= 5.2.3' #Search engine optimization
 gem 'carrierwave', '~> 1.2', '>= 1.2.2' #uploading images
 #gem 'fog', '~> 2.0' #cloud image upload
